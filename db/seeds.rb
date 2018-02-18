@@ -17,7 +17,7 @@ random_delivery_order = []
 5.times do |index|
   repeat = Random.new.rand(1..5)
   repeat.times do |time|
-    random_delivery_order.push(index + 1)
+    random_delivery_order.push(index + 121)
   end
 end
 
@@ -45,6 +45,7 @@ end
 #delivery order data
 5.times do |index|
   new_delivery_order = DeliveryOrder.new
+  new_delivery_order.id = 121 + index
   new_delivery_order.order_id = "GO12#{index + 1}"
   new_delivery_order.serving_datetime = Faker::Time.forward(30, :day).beginning_of_hour
   new_delivery_order.save
