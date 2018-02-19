@@ -12,7 +12,7 @@ module Ordoo
     config.load_defaults 5.1
 
     # timezone configuration
-    config.active_record.default_timezone = :local
+    config.active_record.default_timezone = 'Singapore'
 
     # cors configuration
     config.middleware.insert_before 0, Rack::Cors do
