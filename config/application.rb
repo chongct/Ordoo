@@ -11,7 +11,7 @@ module Ordoo
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
-    # timezone configuration
+    # timezone configuration, for local DB
     # config.time_zone = 'Singapore'
     # config.active_record.default_timezone = :local
 

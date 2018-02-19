@@ -8,6 +8,7 @@ class DeliveryOrdersController < ApplicationController
       delivery_orders_formatted = {}
       delivery_orders_formatted[:order_id] = order[:order_id]
       delivery_orders_formatted[:delivery_date] = order[:serving_datetime].to_date
+      # for local DB
       # start_time = order[:serving_datetime].in_time_zone("Singapore")
       # end_time = order[:serving_datetime].in_time_zone("Singapore") + 30.minutes
       start_time = order[:serving_datetime]
