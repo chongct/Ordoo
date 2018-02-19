@@ -22,7 +22,7 @@ module Ordoo
       end
     end
 
-    config.autoload_paths << Rails.root.join("app", "types")
+    # config.autoload_paths << Rails.root.join("app", "types")
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

@@ -8,11 +8,5 @@ Types::OrderItemType = GraphQL::ObjectType.define do
   field :unit_price, !types.Int
   field :delivery_order_id, !types.ID
   field :meal_id, !types.ID
-  field :delivery_orders do
-    type Types::DeliveryOrderType
-    resolve -> (order_item, args, ctx) {
-      order_item.delivery_order
-    }
-  end
 
 end

@@ -19,7 +19,7 @@ Types::QueryType = GraphQL::ObjectType.define do
     resolve -> (obj, args, ctx) { Feedback.all }
   end
 
-  field :order_item, !types[Types::OrderItemType] do
+  field :order_items, !types[Types::OrderItemType] do
     resolve -> (obj, args, ctx) { OrderItem.all }
   end
 
