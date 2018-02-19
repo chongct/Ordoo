@@ -8,10 +8,10 @@ class DeliveryOrdersController < ApplicationController
       delivery_orders_formatted = {}
       delivery_orders_formatted[:order_id] = order[:order_id]
       delivery_orders_formatted[:delivery_date] = order[:serving_datetime].to_date
-      # start_time = order[:serving_datetime].in_time_zone("Singapore")
-      # end_time = order[:serving_datetime].in_time_zone("Singapore") + 30.minutes
-      start_time = order[:serving_datetime]
-      end_time = order[:serving_datetime] + 30.minutes
+      start_time = order[:serving_datetime].in_time_zone("Singapore")
+      end_time = order[:serving_datetime].in_time_zone("Singapore") + 30.minutes
+      # start_time = order[:serving_datetime]
+      # end_time = order[:serving_datetime] + 30.minutes
       delivery_orders_formatted[:delivery_time] = "#{start_time.to_s(:time)}-#{end_time.to_s(:time)}"
       formatted_array.push(delivery_orders_formatted)
     end
